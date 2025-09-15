@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Viewport mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <!-- Fonts & icons -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Be+Vietnam+Pro:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <title>Opportunité d’emploi – Recrutement</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Design tokens -->
+    <style type="text/tailwindcss">
+      :root {
+        --energy-green: #6aec13;
+        --sky-blue: #3b82f6; /* bleu + contrasté pour mobile */
+        --coffee-yellow: #f59e0b;
+        --dark-text: #131b0d;
+        --light-bg: #fafcf8;
+        --light-green-bg: #ecf3e7;
+        --border-color: #d9e7cf;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * { @apply !transition-none !animate-none; }
+      }
+    </style>
+
+    <!-- Mobile-safe height & background -->
+    <style>
+      html, body { height: 100%; }
+      body { min-height: 100svh; background: var(--light-bg); }
+    </style>
+  </head>
+
+  <body style='font-family:"Be Vietnam Pro","Noto Sans",system-ui,-apple-system,sans-serif'>
+    <div class="relative flex min-h-[100svh] w-full flex-col overflow-x-hidden bg-[var(--light-bg)]">
+      <!-- Header -->
+      <header
+        class="sticky top-0 z-10 flex items-center justify-between bg-[var(--light-bg)] px-4 py-3 shadow-sm"
+        style="padding-top: env(safe-area-inset-top);"
+      >
+        <button class="text-[var(--dark-text)] -ml-2 p-2 rounded-lg active:scale-95" aria-label="Retour">
+          <span class="material-symbols-outlined">arrow_back_ios_new</span>
+        </button>
+        <h1 class="flex-1 text-center text-base font-extrabold text-[var(--dark-text)]">
+          Opportunité d’emploi
+        </h1>
+        <div class="w-8" aria-hidden="true"></div>
+      </header>
+
+      <main class="flex-grow">
+        <!-- HERO -->
+        <section class="relative isolate">
+          <div
+            class="flex min-h-[60svh] flex-col items-start justify-end bg-cover bg-center bg-no-repeat p-5 sm:p-6"
+            style='background-image: linear-gradient(rgba(0,0,0,.25) 0%, rgba(0,0,0,.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBqr1UKkZ7ZhVZFmQDx-XUNMNULD7okogYya0rlF-LeNNlOLtkNcrdba3sTDxBOFjGeXnZR-3JxX-brOu6PZCRWeNT-A1BRTagdaH0_AHDlAMyoUiOz72w-R8P-d8bevn7VrMu0QUcAKTB5RZ7T7goR8sjO2xEdrosi_TTQ-oH3gaQ0ValTwfV4RkEniZoZHr-4Lw4LIepe7XSPxtltSsXOcV7Lh1KcPQVuHee-fQBWFydt2jFFWedbYAB64cLyYAuXci3Ae8V90j42");'
+            role="img"
+            aria-label="Équipe souriante partageant un café"
+          >
+            <div class="flex max-w-[36ch] flex-col gap-3">
+              <h2 class="text-[28px] sm:text-4xl font-black leading-tight tracking-tight text-white">
+                Un job sympa : payé à boire des cafés et aider les gens ☕⚡
+              </h2>
+              <p class="text-sm text-white/95">
+                Rejoins notre équipe ! CDI, fixe + commissions, horaires cool (11h–15h), petit déj offert tous les matins.
+              </p>
+              <a
+                href="#candidature"
+                class="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--energy-green)] px-6 py-3 text-sm font-extrabold text-[var(--dark-text)] shadow-sm active:scale-95"
+              >
+                Je postule maintenant 🚀
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Avantages -->
+        <section class="px-5 py-6">
+          <h3 class="mb-4 text-xl font-extrabold text-[var(--dark-text)]">Pourquoi nous rejoindre&nbsp;?</h3>
+
+          <!-- Mobile: liste empilée ; à partir de sm: 2 colonnes -->
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <article class="flex items-start gap-3 rounded-xl border border-[var(--border-color)] bg-white p-4 shadow-sm">
+              <div class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-[var(--sky-blue)] text-2xl text-white">
+                😎
+              </div>
+              <div>
+                <h4 class="font-bold text-[var(--dark-text)]">Ambiance cool</h4>
+                <p class="text-sm text-gray-600">Une atmosphère de travail fun et décontractée.</p>
+              </div>
+            </article>
+
+            <article class="flex items-start gap-3 rounded-xl border border-[var(--border-color)] bg-white p-4 shadow-sm">
+              <div class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-[var(--coffee-yellow)] text-2xl text-white">
+                🕒
+              </div>
+              <div>
+                <h4 class="font-bold text-[var(--dark-text)]">Horaires 11h–15h</h4>
+                <p class="text-sm text-gray-600">Des horaires adaptés pour un meilleur équilibre.</p>
+              </div>
+            </article>
+
+            <article class="flex items-start gap-3 rounded-xl border border-[var(--border-color)] bg-white p-4 shadow-sm">
+              <div class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-[var(--energy-green)] text-2xl text-white">
+                🥐
+              </div>
+              <div>
+                <h4 class="font-bold text-[var(--dark-text)]">Petit déj & café</h4>
+                <p class="text-sm text-gray-600">De 9h30 à 10h30 pour bien commencer la journée.</p>
+              </div>
+            </article>
+
+            <article class="flex items-start gap-3 rounded-xl border border-[var(--border-color)] bg-white p-4 shadow-sm">
+              <div class="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-[var(--sky-blue)] text-2xl text-white">
+                💶
+              </div>
+              <div>
+                <h4 class="font-bold text-[var(--dark-text)]">Rémunération attractive</h4>
+                <p class="text-sm text-gray-600">CDI + SMIC fixe + commissions intéressantes.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Détails du job -->
+        <section class="bg-white px-5 py-6">
+          <h3 class="mb-4 text-xl font-extrabold text-[var(--dark-text)]">Détail du poste</h3>
+
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined mt-0.5 text-2xl text-[var(--energy-green)]">home</span>
+              <div>
+                <h4 class="font-bold text-[var(--dark-text)]">Visites à domicile</h4>
+                <p class="text-sm text-gray-600">
+                  Aller à la rencontre des particuliers pour les aider à réduire leur facture d’énergie.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined mt-0.5 text-2xl text-[var(--sky-blue)]">badge</span>
+              <div>
+                <h4 class="font-bold text-[var(--dark-text)]">Équipement fourni</h4>
+                <p class="text-sm text-gray-600">Badge, tablette, accompagnement terrain.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined mt-0.5 text-2xl text-[var(--coffee-yellow)]">groups</span>
+              <div>
+                <h4 class="font-bold text-[var(--dark-text)]">Routine d’équipe</h4>
+                <p class="text-sm text-gray-600">Petit déj d’équipe et briefing quotidien.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined mt-0.5 text-2xl text-blue-500">school</span>
+              <div>
+                <h4 class="font-bold text-[var(--dark-text)]">Formation assurée</h4>
+                <p class="text-sm text-gray-600">Parcours de formation dédié avec montée en compétence.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Candidature -->
+        <section id="candidature" class="px-5 py-6">
+          <h3 class="mb-4 text-xl font-extrabold text-[var(--dark-text)]">Postuler maintenant 🚀</h3>
+
+          <form class="flex flex-col gap-4" action="#" method="post" novalidate>
+            <label class="sr-only" for="name">Nom complet</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              required
+              autocomplete="name"
+              placeholder="Nom complet"
+              class="w-full rounded-full border-[var(--border-color)] bg-[var(--light-green-bg)] px-4 py-3 text-base text-[var(--dark-text)] placeholder:text-gray-500 focus:border-[var(--energy-green)] focus:ring-[var(--energy-green)]"
+            />
+
+            <label class="sr-only" for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              inputmode="email"
+              autocomplete="email"
+              placeholder="Email"
+              class="w-full rounded-full border-[var(--border-color)] bg-[var(--light-green-bg)] px-4 py-3 text-base text-[var(--dark-text)] placeholder:text-gray-500 focus:border-[var(--energy-green)] focus:ring-[var(--energy-green)]"
+            />
+
+            <label class="sr-only" for="phone">Téléphone</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              required
+              inputmode="tel"
+              autocomplete="tel"
+              placeholder="Téléphone"
+              class="w-full rounded-full border-[var(--border-color)] bg-[var(--light-green-bg)] px-4 py-3 text-base text-[var(--dark-text)] placeholder:text-gray-500 focus:border-[var(--energy-green)] focus:ring-[var(--energy-green)]"
+            />
+
+            <button
+              type="submit"
+              class="mt-1 w-full rounded-full bg-[var(--energy-green)] py-4 text-base font-extrabold text-[var(--dark-text)] shadow-sm active:scale-95"
+            >
+              Envoyer ma candidature
+            </button>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
