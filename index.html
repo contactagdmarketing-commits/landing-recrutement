@@ -227,5 +227,124 @@
         </section>
       </main>
     </div>
+<!-- ================= POPUP COOPTATION ================= -->
+<!-- Overlay -->
+<div id="coop-overlay"
+     class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 p-4">
+  <!-- Dialog -->
+  <div id="coop-dialog"
+       role="dialog" aria-modal="true" aria-labelledby="coop-title"
+       class="relative w-full max-w-md rounded-2xl bg-white p-5 shadow-xl outline-none">
+    <!-- Close button (X) -->
+    <button id="coop-close"
+            class="absolute right-2 top-2 inline-flex h-9 w-9 items-center justify-center rounded-full text-neutral-600 hover:bg-neutral-100 active:scale-95"
+            aria-label="Fermer la fenêtre">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+
+    <!-- Header -->
+    <div class="mb-3 flex items-center gap-2">
+      <span class="text-2xl">🎉</span>
+      <h3 id="coop-title" class="text-xl font-extrabold text-neutral-900">
+        Prime de cooptation
+      </h3>
+    </div>
+
+    <!-- Headline -->
+    <p class="text-lg font-bold leading-snug text-neutral-900">
+      Gagnez <span class="text-emerald-600">500 €</span> en parrainant un ami 👥💶
+    </p>
+    <p class="mt-1 text-sm text-neutral-600">
+      500 € versés dès que votre filleul réalise <span class="font-semibold">20 premières ventes validées</span>.
+    </p>
+
+    <!-- What is cooptation -->
+    <div class="mt-4 space-y-2 rounded-xl bg-neutral-50 p-4">
+      <h4 class="text-sm font-semibold text-neutral-900">C’est quoi la cooptation&nbsp;?</h4>
+      <ul class="list-disc pl-5 text-sm text-neutral-700">
+        <li>Vous <strong>recommandez</strong> un candidat pour notre poste CDI (terrain énergie).</li>
+        <li>Nous le <strong>recrutons</strong> après entretien et formation.</li>
+        <li>À <strong>20 ventes validées</strong> → <strong>500 € pour vous</strong>.</li>
+      </ul>
+    </div>
+
+    <!-- Conditions -->
+    <div class="mt-3 space-y-1">
+      <h5 class="text-sm font-semibold text-neutral-900">Conditions clés</h5>
+      <ul class="list-disc pl-5 text-sm text-neutral-700">
+        <li>Filleul <strong>nouveau</strong> (pas déjà en process).</li>
+        <li>Ventes <strong>validées</strong> (sans annulation / rétractation).</li>
+        <li>Versement sous <strong>15 jours</strong> après la 20ᵉ vente.</li>
+      </ul>
+    </div>
+
+    <!-- CTAs -->
+    <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+      <a id="coop-cta"
+         href="https://docs.google.com/forms/d/TON-LIEN/viewform"
+         target="_blank" rel="noopener"
+         class="inline-flex flex-1 items-center justify-center rounded-full bg-[var(--energy-green)] px-6 py-3 font-bold text-[var(--dark-text)] shadow-sm active:scale-95">
+        Je parraine quelqu’un
+      </a>
+      <button id="coop-continue"
+              class="inline-flex flex-1 items-center justify-center rounded-full bg-neutral-100 px-6 py-3 font-semibold text-neutral-800 hover:bg-neutral-200 active:scale-95">
+        Continuer sans
+      </button>
+    </div>
+
+    <!-- Legal microcopy -->
+    <p class="mt-3 text-center text-xs text-neutral-500">
+      Offre valable en France. 1 prime par filleul. Règlement détaillé sur demande.
+    </p>
+  </div>
+</div>
+
+<!-- Optional: bouton pour rouvrir la modale à tout moment -->
+<button id="coop-reopen"
+        class="fixed bottom-4 right-4 z-40 hidden rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-white shadow-lg active:scale-95">
+  💶 Parrainer
+</button>
+
+<script>
+  (function () {
+    const overlay   = document.getElementById('coop-overlay');
+    const dialog    = document.getElementById('coop-dialog');
+    const btnClose  = document.getElementById('coop-close');
+    const btnCont   = document.getElementById('coop-continue');
+    const btnReopen = document.getElementById('coop-reopen');
+
+    // Ouvre la modale au chargement
+    function openCoop() {
+      overlay.classList.remove('hidden');
+      btnReopen.classList.add('hidden');
+      // Focus accessible
+      setTimeout(() => btnClose.focus(), 0);
+    }
+    // Ferme la modale
+    function closeCoop() {
+      overlay.classList.add('hidden');
+      btnReopen.classList.remove('hidden');
+    }
+
+    // Ouvrir au premier chargement
+    document.addEventListener('DOMContentLoaded', openCoop);
+
+    // Fermetures
+    btnClose.addEventListener('click', closeCoop);
+    btnCont.addEventListener('click', closeCoop);
+    // Clic en dehors
+    overlay.addEventListener('click', (e) => {
+      if (!dialog.contains(e.target)) closeCoop();
+    });
+    // Esc
+    document.addEventListener('keydown', (e) => {
+      if (!overlay.classList.contains('hidden') && e.key === 'Escape') closeCoop();
+    });
+    // Bouton de réouverture
+    btnReopen.addEventListener('click', openCoop);
+  })();
+</script>
+<!-- =============== FIN POPUP COOPTATION =============== -->
+
   </body>
 </html>
