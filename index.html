@@ -228,6 +228,35 @@
     </button>
   </form>
 </section>
+<script>
+  (function () {
+    // Sélectionne le <form> de la candidature (celui dans ton bloc)
+    const form = document.querySelector('#candidature form');
+    if (!form) return;
+
+    // URL de ta page merci
+    const MERCI_URL = 'https://contactagdmarketing-commits.github.io/landing-recrutement/merci.html';
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // on empêche l’envoi "classique"
+
+      // On envoie à Formspree en arrière-plan
+      const data = new FormData(form);
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        // Quoi qu’il arrive, on redirige vers ta page merci
+        window.location.href = MERCI_URL;
+      } catch (err) {
+        // Même en cas d’erreur réseau, on redirige vers merci
+        window.location.href = MERCI_URL;
+      }
+    });
+  })();
+</script>
       </main>
     </div>
 
