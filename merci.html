@@ -2,15 +2,44 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Merci – AGD</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Merci – AGD Marketing</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 </head>
-<body class="bg-neutral-50 text-neutral-900">
-  <main class="max-w-md mx-auto p-6 text-center">
-    <h1 class="text-3xl font-extrabold mb-3">Merci 🙌</h1>
-    <p>Candidature bien reçue. Nous revenons vers toi très vite.</p>
-    <a href="index.html" class="inline-block mt-6 rounded-full bg-emerald-400 px-6 py-3 font-semibold">Retour à l’accueil</a>
+<body class="bg-neutral-50 text-neutral-900 font-sans">
+  <main class="flex min-h-screen items-center justify-center p-6">
+    <div class="max-w-xl w-full rounded-2xl bg-white p-8 shadow-lg text-center space-y-6">
+      
+      <!-- Illustration -->
+      <img src="https://cdn-icons-png.flaticon.com/512/3771/3771518.png" alt="Candidature envoyée" class="mx-auto h-24 w-24" />
+
+      <!-- Message principal -->
+      <h1 class="text-3xl font-bold text-emerald-600">Merci pour votre candidature 🎉</h1>
+      <p class="text-gray-700 text-lg">
+        Votre candidature a bien été transmise à notre équipe RH.<br/>
+        Nous vous contacterons rapidement pour la suite 🚀
+      </p>
+
+      <!-- Bloc cooptation -->
+      <div class="rounded-xl bg-emerald-50 border border-emerald-200 p-5 text-left space-y-2">
+        <h2 class="text-xl font-semibold text-emerald-700">💶 Prime de cooptation</h2>
+        <p class="text-gray-700">
+          Recommandez un ami pour rejoindre l’équipe !<br/>
+          Dès qu’il atteint ses <strong>20 premières ventes</strong>, vous recevez une prime de <strong>500 €</strong>.
+        </p>
+        <a href="parrainage.html" 
+           class="inline-block mt-2 rounded-full bg-emerald-500 px-5 py-2 text-white font-semibold shadow hover:bg-emerald-600 transition">
+           Je parraine quelqu’un →
+        </a>
+      </div>
+
+      <!-- Retour à l'accueil -->
+      <a href="index.html"
+         class="inline-block rounded-full bg-gray-200 px-5 py-2 font-semibold text-gray-800 shadow hover:bg-gray-300 transition">
+         ← Retour à l’accueil
+      </a>
+
+    </div>
   </main>
 </body>
 </html>
