@@ -181,7 +181,7 @@
         <section id="candidature" class="px-5 py-6">
           <h3 class="mb-4 text-xl font-extrabold text-[var(--dark-text)]">Postuler maintenant 🚀</h3>
 
-          <form class="flex flex-col gap-4" action="#" method="post" novalidate>
+          <form action="https://formspree.io/f/xldwyabd" method="POST" class="flex flex-col gap-4">
             <label class="sr-only" for="name">Nom complet</label>
             <input
               id="name"
@@ -190,8 +190,8 @@
               required
               autocomplete="name"
               placeholder="Nom complet"
-              class="w-full rounded-full border-[var(--border-color)] bg-[var(--light-green-bg)] px-4 py-3 text-base text-[var(--dark-text)] placeholder:text-gray-500 focus:border-[var(--energy-green)] focus:ring-[var(--energy-green)]"
-            />
+              <input name="name" class="w-full rounded-full border-[var(--border-color)] bg-[var(--light-green-bg)] p-4 text-base text-[var(--dark-text)] placeholder:text-gray-500 focus:border-[var(--energy-green)] focus:ring-[var(--energy-green)]" placeholder="Nom" type="text" required autocomplete="name" />
+
 
             <label class="sr-only" for="email">Email</label>
             <input
@@ -202,8 +202,8 @@
               inputmode="email"
               autocomplete="email"
               placeholder="Email"
-              class="w-full rounded-full border-[var(--border-color)] bg-[var(--light-green-bg)] px-4 py-3 text-base text-[var(--dark-text)] placeholder:text-gray-500 focus:border-[var(--energy-green)] focus:ring-[var(--energy-green)]"
-            />
+              <input name="email" class="w-full rounded-full border-[var(--border-color)] bg-[var(--light-green-bg)] p-4 text-base text-[var(--dark-text)] placeholder:text-gray-500 focus:border-[var(--energy-green)] focus:ring-[var(--energy-green)]" placeholder="Email" type="email" required autocomplete="email" />
+
 
             <label class="sr-only" for="phone">Téléphone</label>
             <input
@@ -214,8 +214,8 @@
               inputmode="tel"
               autocomplete="tel"
               placeholder="Téléphone"
-              class="w-full rounded-full border-[var(--border-color)] bg-[var(--light-green-bg)] px-4 py-3 text-base text-[var(--dark-text)] placeholder:text-gray-500 focus:border-[var(--energy-green)] focus:ring-[var(--energy-green)]"
-            />
+              <input name="phone" class="w-full rounded-full border-[var(--border-color)] bg-[var(--light-green-bg)] p-4 text-base text-[var(--dark-text)] placeholder:text-gray-500 focus:border-[var(--energy-green)] focus:ring-[var(--energy-green)]" placeholder="Téléphone" type="tel" required autocomplete="tel" />
+
 
             <button
               type="submit"
