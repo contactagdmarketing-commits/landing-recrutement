@@ -177,56 +177,60 @@
           </div>
         </section>
 
-        <!-- Candidature -->
-        <section id="candidature" class="px-5 py-6">
-          <h3 class="mb-4 text-xl font-extrabold text-[var(--dark-text)]">Postuler maintenant 🚀</h3>
+<!-- Candidature -->
+<section id="candidature" class="px-5 py-6">
+  <h3 class="mb-4 text-xl font-extrabold text-[var(--dark-text)]">Postuler maintenant 🚀</h3>
 
-          <form action="https://formspree.io/f/xldwyabd" method="POST" class="flex flex-col gap-4">
-            <label class="sr-only" for="name">Nom complet</label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              required
-              autocomplete="name"
-              placeholder="Nom complet"
-              <input name="name" class="w-full rounded-full border-[var(--border-color)] bg-[var(--light-green-bg)] p-4 text-base text-[var(--dark-text)] placeholder:text-gray-500 focus:border-[var(--energy-green)] focus:ring-[var(--energy-green)]" placeholder="Nom" type="text" required autocomplete="name" />
+  <form action="https://formspree.io/f/xldwyabd" method="POST" class="flex flex-col gap-4">
+    <!-- Redirection automatique après envoi -->
+    <input type="hidden" name="_redirect" value="https://contactagdmarketing-commits.github.io/landing-recrutement/merci.html" />
 
+    <label class="sr-only" for="name">Nom complet</label>
+    <input
+      id="name"
+      name="name"
+      type="text"
+      required
+      autocomplete="name"
+      placeholder="Nom complet"
+      class="w-full rounded-full border-[var(--border-color)] bg-[var(--light-green-bg)] p-4 text-base text-[var(--dark-text)] placeholder:text-gray-500 focus:border-[var(--energy-green)] focus:ring-[var(--energy-green)]"
+    />
 
-            <label class="sr-only" for="email">Email</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              required
-              inputmode="email"
-              autocomplete="email"
-              placeholder="Email"
-              <input name="email" class="w-full rounded-full border-[var(--border-color)] bg-[var(--light-green-bg)] p-4 text-base text-[var(--dark-text)] placeholder:text-gray-500 focus:border-[var(--energy-green)] focus:ring-[var(--energy-green)]" placeholder="Email" type="email" required autocomplete="email" />
+    <label class="sr-only" for="email">Email</label>
+    <input
+      id="email"
+      name="email"
+      type="email"
+      required
+      inputmode="email"
+      autocomplete="email"
+      placeholder="Email"
+      class="w-full rounded-full border-[var(--border-color)] bg-[var(--light-green-bg)] p-4 text-base text-[var(--dark-text)] placeholder:text-gray-500 focus:border-[var(--energy-green)] focus:ring-[var(--energy-green)]"
+    />
 
+    <label class="sr-only" for="phone">Téléphone</label>
+    <input
+      id="phone"
+      name="phone"
+      type="tel"
+      required
+      inputmode="tel"
+      autocomplete="tel"
+      placeholder="Téléphone"
+      class="w-full rounded-full border-[var(--border-color)] bg-[var(--light-green-bg)] p-4 text-base text-[var(--dark-text)] placeholder:text-gray-500 focus:border-[var(--energy-green)] focus:ring-[var(--energy-green)]"
+    />
 
-            <label class="sr-only" for="phone">Téléphone</label>
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              required
-              inputmode="tel"
-              autocomplete="tel"
-              placeholder="Téléphone"
-              <input name="phone" class="w-full rounded-full border-[var(--border-color)] bg-[var(--light-green-bg)] p-4 text-base text-[var(--dark-text)] placeholder:text-gray-500 focus:border-[var(--energy-green)] focus:ring-[var(--energy-green)]" placeholder="Téléphone" type="tel" required autocomplete="tel" />
-
-
-            <button
-              type="submit"
-              class="mt-1 w-full rounded-full bg-[var(--energy-green)] py-4 text-base font-extrabold text-[var(--dark-text)] shadow-sm active:scale-95"
-            >
-              Envoyer ma candidature
-            </button>
-          </form>
-        </section>
+    <button
+      type="submit"
+      class="mt-1 w-full rounded-full bg-[var(--energy-green)] py-4 text-base font-extrabold text-[var(--dark-text)] shadow-sm active:scale-95"
+    >
+      Envoyer ma candidature
+    </button>
+  </form>
+</section>
       </main>
     </div>
+
 <!-- ================= POPUP COOPTATION ================= -->
 <!-- Overlay -->
 <div id="coop-overlay"
